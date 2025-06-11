@@ -9,29 +9,58 @@
   --font-roboto: 'Roboto', sans-serif;
   --font-opensans: 'Open Sans', sans-serif;
   --color-blacktext: #171717;
-  --color-mint-50: #ecfdf5;
-  --color-mint-100: #d0fbe5;
-  --color-mint-200: #a4f4cf;
-  --color-mint-300: #6ce9b7;
-  --color-mint-400: #31d69a;
-  --color-mint-500: #0dbc82;
-  --color-mint-600: #03986a;
-  --color-mint-700: #027a58;
-  --color-mint-800: #056047;
-  --color-mint-900: #054f3c;
-  --color-mint-950: #012d22;
+  
+  /* Blue color palette replacing mint */
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+  --color-blue-950: #172554;
 
-  --color-riptide-50: #f0fdfa;
-  --color-riptide-100: #cbfcf1;
-  --color-riptide-200: #96f7e4;
-  --color-riptide-300: #5cecd5;
-  --color-riptide-400: #2bd6c1;
-  --color-riptide-500: #12baa8;
-  --color-riptide-600: #0b9689;
-  --color-riptide-700: #0e776f;
-  --color-riptide-800: #105f5a;
-  --color-riptide-900: #124f4b;
-  --color-riptide-950: #03302f;
+  /* Cyan color palette replacing riptide */
+  --color-cyan-50: #ecfeff;
+  --color-cyan-100: #cffafe;
+  --color-cyan-200: #a5f3fc;
+  --color-cyan-300: #67e8f9;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+  --color-cyan-600: #0891b2;
+  --color-cyan-700: #0e7490;
+  --color-cyan-800: #155e75;
+  --color-cyan-900: #164e63;
+  --color-cyan-950: #083344;
+
+  /* Keep mint colors for backward compatibility but rename to blue */
+  --color-mint-50: var(--color-blue-50);
+  --color-mint-100: var(--color-blue-100);
+  --color-mint-200: var(--color-blue-200);
+  --color-mint-300: var(--color-blue-300);
+  --color-mint-400: var(--color-blue-400);
+  --color-mint-500: var(--color-blue-500);
+  --color-mint-600: var(--color-blue-600);
+  --color-mint-700: var(--color-blue-700);
+  --color-mint-800: var(--color-blue-800);
+  --color-mint-900: var(--color-blue-900);
+  --color-mint-950: var(--color-blue-950);
+
+  /* Keep riptide colors for backward compatibility but rename to cyan */
+  --color-riptide-50: var(--color-cyan-50);
+  --color-riptide-100: var(--color-cyan-100);
+  --color-riptide-200: var(--color-cyan-200);
+  --color-riptide-300: var(--color-cyan-300);
+  --color-riptide-400: var(--color-cyan-400);
+  --color-riptide-500: var(--color-cyan-500);
+  --color-riptide-600: var(--color-cyan-600);
+  --color-riptide-700: var(--color-cyan-700);
+  --color-riptide-800: var(--color-cyan-800);
+  --color-riptide-900: var(--color-cyan-900);
+  --color-riptide-950: var(--color-cyan-950);
 
   --animate-rotate: rotate 10s linear infinite;
 
@@ -50,18 +79,18 @@
 }
 
 ::selection {
-	@apply text-white bg-mint-500;
+	@apply text-white bg-blue-500;
 	
   }
 *::-webkit-scrollbar-thumb{
 	border-radius: 20px;
 }
 .dark *{
-	scrollbar-color: #6ce9b7 #012d22;
+	scrollbar-color: #93c5fd #172554;
 	scrollbar-width: thin;
 }
  *{
-	scrollbar-color: #6ce9b7 #d0fbe5;
+	scrollbar-color: #93c5fd #dbeafe;
 	scrollbar-width: thin;
 	box-sizing: border-box;
 }
@@ -110,7 +139,7 @@ a.inline-block.leading-5.pl-12{
 }
 
 .markdown a {
-	@apply text-xl max-md:text-lg font-semibold dark:text-riptide-300! text-mint-500! underline hover:text-riptide-400! transition-all;
+	@apply text-xl max-md:text-lg font-semibold dark:text-cyan-300! text-blue-500! underline hover:text-cyan-400! transition-all;
 }
 
 .markdown ol{
@@ -128,12 +157,12 @@ a.inline-block.leading-5.pl-12{
 }
 
 .markdown hr {
-	@apply dark:text-mint-300/50 text-blacktext/30;
+	@apply dark:text-blue-300/50 text-blacktext/30;
 
 }
 
 .markdown blockquote {
-	@apply py-4 border-l-4 border-mint-500 pl-4 italic text-blacktext dark:text-mint-200 bg-mint-50 dark:bg-mint-900/20 backdrop-blur-lg mb-8;
+	@apply py-4 border-l-4 border-blue-500 pl-4 italic text-blacktext dark:text-blue-200 bg-blue-50 dark:bg-blue-900/20 backdrop-blur-lg mb-8;
 }
 
 .markdown blockquote p {
@@ -170,11 +199,11 @@ a.inline-block.leading-5.pl-12{
   }
   
   .task-list-item input[type="checkbox"] {
-	@apply w-5 h-5 accent-mint-300;
+	@apply w-5 h-5 accent-blue-300;
   }
   
   .task-list-item input[type="checkbox"]:checked + span {
-	@apply line-through text-mint-600;
+	@apply line-through text-blue-600;
   }
   
   .task-list-item span {
@@ -235,7 +264,7 @@ a.inline-block.leading-5.pl-12{
 	display: block;
 	width: 400px;
 	height: 400px;
-	background: #31d69a40;
+	background: #3b82f640;
 	bottom: -400px;
 	right: -300px;
 	position: fixed;
@@ -247,7 +276,7 @@ a.inline-block.leading-5.pl-12{
 
 
 .blur-circle {
-	background-color: rgba(87, 253, 228, 0.29);
+	background-color: rgba(59, 130, 246, 0.29);
 	position: absolute;
 	width: 200px;
 	height: 200px;
@@ -264,7 +293,7 @@ a.inline-block.leading-5.pl-12{
 	display: block;
 	width: 500px;
 	height: 500px;
-	background: #50fd8f25 !important;
+	background: #60a5fa25 !important;
 	bottom: -150px;
 	right: -150px;
 	position: absolute;
