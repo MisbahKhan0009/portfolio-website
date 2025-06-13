@@ -1,8 +1,8 @@
 // src/content/config.ts
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const jsonDataCollection = defineCollection({
-  type: 'data',
+  type: "data",
   schema: z.object({
     //Define JSON-file structure
     profileImage: z.string(),
@@ -15,19 +15,17 @@ const jsonDataCollection = defineCollection({
     portfolioImage: z.string(),
     email: z.string().email(),
     linkedin: z.string().url(),
-    instagram: z.string().url(),
-    youtube: z.string().url(),
+
     alias: z.string(),
     contactSectionTitle: z.string(),
     contactSectionSubtitle: z.string(),
     contactSectionButtonText: z.string(),
     contactSectionButtonIcon: z.string(),
     techsTitle: z.string(),
-    instagramIconName: z.string(),
-    youtubeIconName: z.string(),
+
     githubIconName: z.string(),
     linkedinIconName: z.string(),
-    emailIconName: z.string()
+    emailIconName: z.string(),
   }),
 });
 

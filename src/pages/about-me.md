@@ -4,7 +4,7 @@ title: "Fernando López | My Journey in Technology and Web Development 🚀| EFE
 description: "Web developer, technology enthusiast, and event organizer. From my beginnings in development to creating communities and impactful projects, here I share my journey, experiences, and learnings. 🚀☕"
 author: "Fernando Lopez"
 image:
-  url: "/images/efeeleprofile.webp"
+  url: "/images/profile.jpg"
   alt: "Photo of Fernando Aldair López Ponce (EFEELE) for the blog"
 ---
 
@@ -106,4 +106,4 @@ Oh! And I'm an expert at preparing coffee. Seriously, whether it's to start the 
 
 I'm **Fernando Aldair López Ponce**, and I thank you for reading this.
 
-## Let's Create Amazing Things! 🚀 
+## Let's Create Amazing Things! 🚀
